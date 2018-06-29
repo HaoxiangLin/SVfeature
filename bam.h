@@ -63,7 +63,7 @@ bool BAM::readRecord(char *chrName, int pos, int posEnd)
         record = new BamAlignmentRecord();
         seqan::readRecord(*record, bamFileIn);
         bamRecord.push_back(record);
-        if (record ->beginPos >posEnd)
+        if (record->rID == -1 || record->rID > chrID || record ->beginPos >posEnd)
             break;
     }
     recordCnt = bamRecord.size();
