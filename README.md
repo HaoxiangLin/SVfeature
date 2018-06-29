@@ -8,3 +8,6 @@
 * Output format: feature1, feature2.......
 * Need samtools in `$PATH`
 * Need [SeqAn](www.seqan.de) included
+
+##Update
+Fix a bug in reading BAM file, when the end of the DEL larger than the last alignment in the BAM
